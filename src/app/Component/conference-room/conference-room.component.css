@@ -1,0 +1,83 @@
+
+.stats-card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    background-color: #c2c4c5;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+}
+
+.card-hover-primary:hover {
+    background: linear-gradient(45deg, #98a6ce, #224abe);
+}
+.card-hover-success:hover {
+    background: linear-gradient(45deg, #1cc88a, #169a6b);
+}
+
+.card-hover-info:hover {
+    background: linear-gradient(45deg, #36b9cc, #258391);
+}
+
+.card-hover-warning:hover {
+    background: linear-gradient(45deg, #f6c23e, #dda20a);
+}
+
+
+
+.stats-card:hover .text-primary,
+.stats-card:hover .text-success,
+.stats-card:hover .text-info,
+.stats-card:hover .text-warning,
+.stats-card:hover .text-muted,
+.stats-card:hover .card-title {
+    color: rgb(131, 131, 131) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product-image {
+    transition: all 0.5s ease;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.btn-custom {
+    background: linear-gradient(45deg, #3498db, #2ecc71);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    transform: translateX(5px);
+    box-shadow: -5px 5px 15px rgba(46, 204, 113, 0.3);
+}
