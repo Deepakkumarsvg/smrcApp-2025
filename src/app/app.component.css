@@ -1,4 +1,4 @@
-.mobile-list {
+/* .mobile-list {
   display: none;
 }
 
@@ -10,7 +10,7 @@
   .mobile-list i {
     font-size: 50px;
   }
-}
+} */
 
 /*--------- Togal-----------*/
 .search-container {
@@ -64,5 +64,5 @@
 
 .container {
   padding-left: 20%;
-  padding-bottom: 10%;
+  padding-bottom: 10px;
 }

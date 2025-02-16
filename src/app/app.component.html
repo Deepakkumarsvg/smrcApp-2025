@@ -10,40 +10,46 @@
 
     <div class="collapse navbar-collapse" id="mynavbar">
       <ul class="navbar-nav ms-auto"> <!-- ms-auto pushes nav items to the right -->
-        <!-- <li class="nav-item">
+        <li class="nav-item">
           <a class="nav-link active" routerLink="welcome">Home</a>
-        </li> -->
+        </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="about">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="conference">Conference</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="forms">Forms</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
-<app-welcome-add></app-welcome-add>
-<footer class="bg-white border-top fixed-bottom shadow-sm ">
+
+<footer class=" foot bg-white border-top fixed-bottom shadow-sm ">
   <div class="container mt-2 mr-3">
     <div class="row mb-0 ">
 
       <!-- Home -->
-      <div class="col">
-        <i class="bi bi-house-door-fill fs-3 text-black"></i>
-
+      <div class="col ">
+        <a routerLink="welcome" class="text-decoration-none">
+          <i class="bi bi-house-door-fill fs-3 text-black "></i>
+        </a>
       </div>
 
       <!-- My Network -->
       <div class="col">
-        <i class="bi bi-people-fill fs-3  text-black"></i>
+        <a routerLink="conference" class="text-decoration-none"><i class="bi bi-people-fill fs-3  text-black"></i></a>
+
 
       </div>
 
       <!-- Map -->
       <div class="col">
-        <i class="bi bi-geo-alt-fill fs-3 text-black"></i>
-
+        <a routerLink="map-c" class="text-decoration-none">
+          <i class="bi bi-geo-alt-fill fs-3 text-black"></i>
+        </a>
       </div>
 
     </div>

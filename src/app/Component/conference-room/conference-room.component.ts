@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class ConferenceRoomComponent {
   constructor(private router: Router) {} // Inject the Router
 
-  redirectToPage() {
-    this.router.navigate(['/new-page']); // Redirects to /new-page
+  redirectToPage(page: string) {
+    this.router.navigate([page]);
   }
 }
