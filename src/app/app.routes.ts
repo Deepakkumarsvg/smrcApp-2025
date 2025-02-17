@@ -57,3 +57,5 @@ export const routes: Routes = [
     component: FormsComponent,
   },
 ];
+
+export class AppRoutes{};
