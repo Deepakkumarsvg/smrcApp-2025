@@ -1,68 +1,52 @@
-<div class="container pb-5 mb-5">
-  <h2 class="text-center mb-4 p-4">Specialization</h2>
-  <div class="pb-5 ">
-    <div class="row row-cols-1 row-cols-md-3 g-6">
-      <div class="col p-4">
-        <div class="card h-100 m-4" (click)="redirectToPage('general')" style="cursor: pointer;">
-          <img src="assets/images/sd1.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-center">General</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col p-4">
-        <div class="card h-100 m-4" (click)="redirectToPage('cardiac')" style="cursor: pointer;">
-          <img
-            src="https://images.unsplash.com/photo-1484704849700-f032a568e944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw0fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTczNDc5NTEyM3ww&ixlib=rb-4.0.3&q=80&w=1080"
-            class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-center">Cardiac</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col p-4">
-        <div class="card h-100 m-4" (click)="redirectToPage('urological')" style="cursor: pointer;">
-          <img
-            src="https://images.unsplash.com/photo-1484704849700-f032a568e944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw0fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTczNDc5NTEyM3ww&ixlib=rb-4.0.3&q=80&w=1080"
-            class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-center">Urological</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col p-4">
-        <div class="card h-100 m-4" (click)="redirectToPage('thoracic')" style="cursor: pointer;">
-          <img
-            src="https://images.unsplash.com/photo-1484704849700-f032a568e944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw0fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTczNDc5NTEyM3ww&ixlib=rb-4.0.3&q=80&w=1080"
-            class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-center">Thoracic</h5>
-
-          </div>
-        </div>
-      </div>
-      <div class="col p-4 pb-5">
-        <div class="card h-100 m-4" (click)="redirectToPage('gynaecology')" style="cursor: pointer;">
-          <img
-            src="https://images.unsplash.com/photo-1484704849700-f032a568e944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw0fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTczNDc5NTEyM3ww&ixlib=rb-4.0.3&q=80&w=1080"
-            class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-center">Gynaecology</h5>
-          </div>
-        </div>
-      </div>
-      <div class="col p-4 ">
-        <div class="card h-100 m-4" (click)="redirectToPage('Head-Neck')" style="cursor: pointer;">
-          <img
-            src="https://images.unsplash.com/photo-1484704849700-f032a568e944?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NzEyNjZ8MHwxfHNlYXJjaHw0fHxoZWFkcGhvbmV8ZW58MHwwfHx8MTczNDc5NTEyM3ww&ixlib=rb-4.0.3&q=80&w=1080"
-            class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title text-center">Head & Neck</h5>
-          </div>
-        </div>
+<!-- ---------Card--------- -->
+<div class="container-fluid py-5">
+  <div class="row justify-content-center">
+    <!-- ----General---- -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
+      <div class="custom-card border border-info" (click)="redirectToPage('general')" style="cursor: pointer;">
+        <img src="images/General.png" alt="General">
+        <div class="card-text-overlay">General</div>
       </div>
     </div>
 
+    <!-- ----Cardiac---- -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
+      <div class="custom-card border border-info" (click)="redirectToPage('cardiac')" style="cursor: pointer;">
+        <img src="images/cardiac.png" alt="Cardiac">
+        <div class="card-text-overlay">Cardiac</div>
+      </div>
+    </div>
+
+    <!-- ----Urology---- -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
+      <div class="custom-card border border-info" (click)="redirectToPage('urology')" style="cursor: pointer;">
+        <img src="images/Urology.png" alt="Urological">
+        <div class="card-text-overlay">Urological</div>
+      </div>
+    </div>
+
+    <!-- ----Thoracic---- -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
+      <div class="custom-card border border-info" (click)="redirectToPage('thoracic')" style="cursor: pointer;">
+        <img src="images/Colorectal.png" alt="Thoracic">
+        <div class="card-text-overlay">Thoracic</div>
+      </div>
+    </div>
+
+    <!-- ----Gynaecology---- -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
+      <div class="custom-card border border-info" (click)="redirectToPage('gynaecology')" style="cursor: pointer;">
+        <img src="images/gynaecology.png" alt="Gynaecology">
+        <div class="card-text-overlay">Gynaecology</div>
+      </div>
+    </div>
+
+    <!-- ----Head & Neck---- -->
+    <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
+      <div class="custom-card border border-info" (click)="redirectToPage('head-neck')" style="cursor: pointer;">
+        <img src="images/Head & Neck.png" alt="Head & Neck">
+        <div class="card-text-overlay">Head & Neck</div>
+      </div>
+    </div>
   </div>
+</div>
