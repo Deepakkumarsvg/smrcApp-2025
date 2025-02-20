@@ -14,13 +14,17 @@ import { ChiefGuestComponent } from './Component/chif-guest/chief-guest.componen
 
 export const routes: Routes = [
   {
+    path: '',
+    component: WelcomeAddComponent,
+  },
+  {
     path: 'about',
     component: AboutUsComponent,
   },
-  {
-    path: 'welcome',
-    component: WelcomeAddComponent,
-  },
+  // {
+  //   path: 'welcome',
+  //   component: WelcomeAddComponent,
+  // },
   {
     path: 'conference',
     component: ConferenceRoomComponent,
