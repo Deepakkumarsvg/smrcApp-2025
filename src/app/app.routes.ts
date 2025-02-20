@@ -13,13 +13,17 @@ import { FormsComponent } from './Component/forms/forms.component';
 
 export const routes: Routes = [
   {
+    path: '',
+    component: WelcomeAddComponent,
+  },
+  {
     path: 'about',
     component: AboutUsComponent,
   },
-  {
-    path: 'welcome',
-    component: WelcomeAddComponent,
-  },
+  // {
+  //   path: 'welcome',
+  //   component: WelcomeAddComponent,
+  // },
   {
     path: 'conference',
     component: ConferenceRoomComponent,
