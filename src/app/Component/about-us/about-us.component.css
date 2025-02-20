@@ -12,3 +12,11 @@
 .carousel-inner {
   min-height: 120px;
 }
+
+/* Responsive adjustments for slider-box */
+@media (max-width: 480px) {
+  .slider-box {
+    font-size: 0.9rem;
+    padding: 15px;
+  }
+}
