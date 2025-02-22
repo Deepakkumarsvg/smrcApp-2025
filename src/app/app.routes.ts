@@ -62,4 +62,4 @@ export const routes: Routes = [
   },
 ];
 
-export class AppRoutes{};
+export class AppRoutes {}
