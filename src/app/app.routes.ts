@@ -10,7 +10,6 @@ import { GynaecologyComponent } from './Component/gynaecology/gynaecology.compon
 import { HeadNeckComponent } from './Component/head-neck/head-neck.component';
 import { MapCComponent } from './Component/map-c/map-c.component';
 import { FormsComponent } from './Component/forms/forms.component';
-import { ChiefGuestComponent } from './Component/chif-guest/chief-guest.component';
 
 export const routes: Routes = [
   {
@@ -60,10 +59,6 @@ export const routes: Routes = [
   {
     path: 'forms',
     component: FormsComponent,
-  },
-  {
-    path: 'chief-gust',
-    component: ChiefGuestComponent,
   },
 ];
 

@@ -41,31 +41,31 @@
   background-color: black;
 }
 
-.custom-card {
+/* .custom-card {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
   width: 100%;
-  max-width: 260px; /* Default size */
-  aspect-ratio: 1/1.2; /* Maintains shape */
+  max-width: 260px;
+  aspect-ratio: 1/1.2;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
   box-shadow: 0px 5px 15px rgba(88, 87, 87, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+} */
 
-.custom-card img {
+/* .custom-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: blur(2.25px);
-}
+} */
 
-.custom-card:hover {
+/* .custom-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 10px 20px rgb(22, 22, 22);
-}
+} */
 
-.card-text-overlay {
+/* .card-text-overlay {
   position: absolute;
   bottom: 15px;
   left: 50%;
@@ -74,20 +74,121 @@
   font-size: 1rem;
   font-weight: bold;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 1.5);
-}
+} */
 
 /* ----- Responsive Design ----- */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .custom-card {
-    max-width: 200px; /* Reduce card size on smaller screens */
+    max-width: 200px;
   }
-}
+} */
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .custom-card {
-    max-width: 260px; /* Further reduce for mobile view */
+    max-width: 260px;
   }
   .card-text-overlay {
-    font-size: 0.9rem; /* Adjust text size */
+    font-size: 0.9rem;
   }
+} */
+
+/* --------nwe----- */
+/* Container spacing for bottom nav */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
+
+/* Card Container */
+.specialty-card {
+  position: relative;
+  width: 150px;
+  height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Blurred background container */
+.blur-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Blurred image */
+.blur-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1.5px) brightness(60%);
+  transform: scale(1.1);
+}
+
+/* Overlay text */
+.overlay-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* You can add a small background or shading if you want: */
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+/* Gradient backgrounds for each specialty */
+.general-bg {
+  background: linear-gradient(135deg, #5e35b1, #311b92);
+}
+
+.cardiac-bg {
+  background: linear-gradient(135deg, #d32f2f, #b71c1c);
+}
+
+.urology-bg {
+  background: linear-gradient(135deg, #1976d2, #0d47a1);
+}
+
+.colorectal-bg {
+  background: linear-gradient(135deg, #ffa000, #e65100);
+}
+
+.gynaecology-bg {
+  background: linear-gradient(135deg, #ec407a, #880e4f);
+}
+
+.headneck-bg {
+  background: linear-gradient(135deg, #26c6da, #006064);
+}
+
+/* Bottom Nav */
+/* .bottom-nav {
+  height: 60px;
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* .nav-link {
+  color: #6c757d;
+  font-size: 14px;
+  text-decoration: none;
+} */
+
+/* .nav-link.active {
+  color: #007b8f;
+  font-weight: 600;
+} */
+
+/* .nav-text {
+  font-size: 12px;
+  line-height: 1;
+} */
