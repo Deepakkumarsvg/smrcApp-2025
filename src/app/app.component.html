@@ -4,8 +4,8 @@
       <!-- <span class="navbar-toggler-icon" style="color: aqua;"></span> -->
       <span class="navbar-toggler-icon" style="color: aqua;"></span>
     </button>
-    <form class="d-flex ">
-      <input class="form-control me-2" type="text" placeholder="Search">
+    <form class="d-flex" [formGroup]="searchForm">
+      <input class="form-control me-2" type="text" placeholder="Search" formControlName="searchQuery">
       <button class="btn btn-info" type="button" (click)="search()"> <i class="bi bi-search"></i></button>
     </form>
 
