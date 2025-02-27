@@ -1,47 +1,81 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+<!-- ----old--------- -->
+<nav class="navbar navbar-expand-sm navbar-dark "
+  style=" background: linear-gradient(135deg, #005f5f, #008080, #00b8b8); color:aliceblue">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-      <!-- <span class="navbar-toggler-icon" style="color: aqua;"></span> -->
       <span class="navbar-toggler-icon" style="color: aqua;"></span>
     </button>
     <form class="d-flex ">
       <input class="form-control me-2" type="text" placeholder="Search">
-      <button class="btn btn-info" type="button" (click)="search()"> <i class="bi bi-search"></i></button>
+      <button class="btn " type="button" (click)="search()" style="  background: linear-gradient(135deg, #1dbbbb, #056e6e);
+"> <i class="bi bi-search"></i></button>
     </form>
 
     <div class="collapse navbar-collapse" id="mynavbar">
-      <ul class="navbar-nav ms-auto"> <!-- ms-auto pushes nav items to the right -->
+      <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" routerLink="">Home</a>
+          <a class="nav-link active" routerLink=""><b>Home</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="about">About</a>
+          <a class="nav-link" routerLink="about"><b>About</b></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="conference">Conference</a>
+          <a class="nav-link" (click)="redirectToExternal('https://ssinnovations.com/SMRSC-2025/comittee.html')">
+            <b>Organizing Committee</b>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="forms">Forms</a>
+          <a class="nav-link" (click)="redirectToExternal('https://ssinnovations.com/SMRSC-2025/coming-soon.html')">
+            Chief guests
+          </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="redirectToExternal('https://ssinnovations.com/SMRSC-2025/guest-honour.html')">
+            <b>Guests of Honour</b>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="redirectToExternal('https://ssinnovations.com/SMRSC-2025/venue.html')">
+            The Venue
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="redirectToExternal('https://ssinnovations.com/SMRSC-2025/hotel-near.html')">
+            <b>Hotels nearby</b>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="redirectToExternal('https://ssinnovations.com/contact-us/')">
+            Sales & Support
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="redirectToExternal('https://ssinnovations.com/contact-us/')">
+            Contact Us
+          </a>
+        </li>
+
       </ul>
     </div>
   </div>
 </nav>
 
-<footer class=" foot bg-white border-top fixed-bottom shadow-sm ">
+<footer class=" foot  border-top fixed-bottom shadow-sm "
+  style="background: linear-gradient(135deg, #005f5f, #008080, #00b8b8);">
   <div class="container mt-2 mr-3">
     <div class="row mb-0 ">
 
       <!-- Home -->
       <div class="col ">
-        <a routerLink="" class="text-decoration-none">
-          <i class="bi bi-house-door-fill fs-3 text-black " style="color: var(--teal-color);"></i>
+        <a routerLink="" class="text-decoration-none icon-link">
+          <i class="bi bi-house-door-fill fs-3 text-black " style="color: var(--
+              teal-color);"></i>
         </a>
       </div>
 
       <!-- My Network -->
       <div class="col">
-        <a routerLink="conference" class="text-decoration-none"><i class="bi bi-people-fill fs-3  text-black"
+        <a routerLink="conference" class="text-decoration-none icon-link"><i class="bi bi-people-fill fs-3  text-black"
             style="color: var(--teal-color);"></i></a>
 
 
@@ -49,7 +83,7 @@
 
       <!-- Map -->
       <div class="col">
-        <a routerLink="map-c" class="text-decoration-none" style="color: var(--teal-color);">
+        <a routerLink="map-c" class="text-decoration-none icon-link" style="color: var(--teal-color);">
           <i class="bi bi-geo-alt-fill fs-3 text-black"></i>
         </a>
       </div>
@@ -57,4 +91,5 @@
     </div>
   </div>
 </footer>
+
 <router-outlet></router-outlet>

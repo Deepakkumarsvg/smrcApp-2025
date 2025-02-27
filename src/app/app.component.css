@@ -1,17 +1,3 @@
-/* .mobile-list {
-  display: none;
-}
-
-@media only screen and (max-width: 80px) {
-  .mobile-list {
-    display: block;
-    color: rgb(3, 2, 0);
-  }
-  .mobile-list i {
-    font-size: 50px;
-  }
-} */
-
 /*--------- Togal-----------*/
 .search-container {
   background-color: white;
@@ -65,4 +51,44 @@
 .container {
   padding-left: 20%;
   padding-bottom: 10px;
+}
+
+/* Default Icon Styling */
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 35px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Default Icon Color */
+.icon-link i {
+  color: var(--teal-color);
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect - Change Background and Icon Color */
+.icon-link:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  background-color: rgba(122, 226, 216, 0.2); /* Light teal background */
+  transform: scale(1.05);
+}
+
+.icon-link:hover i {
+  color: #ff5733; /* Change icon color on hover */
+  transform: scale(1.1);
+}
+
+/* Click (Active) Effect - Change Color and Add Glow */
+.icon-link:active {
+  background-color: rgba(0, 150, 136, 0.4); /* Darker background on click */
+  transform: scale(1.1);
+}
+
+.icon-link:active i {
+  color: #d9534f; /* Another color when clicked */
+  text-shadow: 0 0 8px rgba(217, 83, 79, 0.8);
 }
