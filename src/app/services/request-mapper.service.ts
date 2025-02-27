@@ -14,4 +14,5 @@ export class RequestMapperService {
   public static readonly REGISTER_URL: string = environment.SERVER_ENDPOINT + '/auth/register';
   public static readonly REGISTER_OTP_URL: string = environment.SERVER_ENDPOINT + '/auth/register-send-otp';
   public static readonly API_CALL_CHECK: string = environment.SERVER_ENDPOINT + '/users/check-api';
+  public static readonly FETCH_ACTIVITY_LIST: string = environment.SERVER_ENDPOINT + '/activity/all-activity';
 }

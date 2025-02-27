@@ -4,15 +4,19 @@ import { RequestMapperService } from './services/request-mapper.service';
 import { TransmissionService } from './transmission/transmission.service';
 import { Route } from '@angular/router';
 // import { WelcomeAddComponent } from './Component/welcome-add/welcome-add.component';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, ReactiveFormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'tet';
+  public searchForm: FormGroup;
+
   redirectToExternal(url: string) {
     window.location.href = url;
   }
@@ -29,14 +33,21 @@ export class AppComponent {
     this.activeIndex = index;
   }
 
-  constructor(private _transmit: TransmissionService) {}
+  constructor(
+    private transmit: TransmissionService,
+    private fb: FormBuilder
+  ) {
+    this.searchForm = this.fb.group({
+      searchQuery: ['']
+    });
+  }
 
   public async search(): Promise<void> {
-    console.log('clicked me');
-    await this._transmit
-      .executeGetRequestPromise(`${RequestMapperService.API_CALL_CHECK}`)
-      .then((res: any) => {
-        console.log(res);
-      });
+    console.log("clicked me");
+    const searchQuery = this.searchForm.get('searchQuery')?.value;
+    await this.transmit.executeGetRequestPromise(`${RequestMapperService.FETCH_ACTIVITY_LIST}/${searchQuery}`)
+    .then((res: any) => {
+      console.log(res);
+    })
   }
 }
