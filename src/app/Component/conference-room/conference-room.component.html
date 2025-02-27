@@ -1,129 +1,49 @@
-<!-- ---------Card--------- -->
-<!-- <div class="container-fluid py-5"> -->
-<!-- <div class="row justify-content-center"> -->
-<!-- ----General---- -->
-<!-- <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
-      <div class="custom-card border border-info" (click)="redirectToPage('general')" style="cursor: pointer;">
-        <img src="images/General.png" alt="General">
-        <div class="card-text-overlay">General</div>
-      </div>
-    </div> -->
-
-<!-- ----Cardiac---- -->
-<!-- <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
-      <div class="custom-card border border-info" (click)="redirectToPage('cardiac')" style="cursor: pointer;">
-        <img src="images/cardiac.png" alt="Cardiac">
-        <div class="card-text-overlay">Cardiac</div>
-      </div>
-    </div> -->
-
-<!-- ----Urology---- -->
-<!-- <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
-      <div class="custom-card border border-info" (click)="redirectToPage('urological')" style="cursor: pointer;">
-        <img src="images/Urology.png" alt="Urological">
-        <div class="card-text-overlay">Urological</div>
-      </div>
-    </div> -->
-
-<!-- ----Thoracic---- -->
-<!-- <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
-      <div class="custom-card border border-info" (click)="redirectToPage('thoracic')" style="cursor: pointer;">
-        <img src="images/Colorectal.png" alt="Thoracic">
-        <div class="card-text-overlay">Thoracic</div>
-      </div>
-    </div> -->
-
-<!-- ----Gynaecology---- -->
-<!-- <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
-      <div class="custom-card border border-info" (click)="redirectToPage('gynaecology')" style="cursor: pointer;">
-        <img src="images/gynaecology.png" alt="Gynaecology">
-        <div class="card-text-overlay">Gynaecology</div>
-      </div>
-    </div> -->
-
-<!-- ----Head & Neck---- -->
-<!-- <div class="col-12 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-center mb-4">
-      <div class="custom-card border border-info" (click)="redirectToPage('Head-Neck')" style="cursor: pointer;">
-        <img src="images/Head & Neck.png" alt="Head & Neck">
-        <div class="card-text-overlay">Head & Neck</div>
-      </div>
-    </div> -->
-<!-- </div>
-</div>
- -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ------------new card-------- -->
-<div class="container py-4 mb-5">
-  <div class="row g-3">
-    <!-- General -->
-    <div class="col-6 d-flex justify-content-center" (click)="redirectToPage('general')" style="cursor: pointer;">
-      <div class="specialty-card general-bg">
-        <div class="blur-bg">
-          <img src="images/General.png" alt="General" class="blur-img" />
-        </div>
-        <div class="overlay-text">General</div>
-      </div>
+<div class="menu-container">
+  <!-- GENERAL -->
+  <div class="menu-item teal-gradient" (click)="redirectToPage('general')">
+    <span class="menu-text">GENERAL</span>
+    <div class="menu-icon">
+      <i class="arrow-right"></i>
     </div>
+  </div>
 
-    <!-- Cardiac -->
-    <div class="col-6 d-flex justify-content-center" (click)="redirectToPage('cardiac')" style="cursor: pointer;">
-      <div class="specialty-card cardiac-bg">
-        <div class="blur-bg">
-          <img src="images/cardiac.png" alt="Cardiac" class="blur-img" />
-        </div>
-        <div class="overlay-text">Cardiac</div>
-      </div>
+  <!-- CARDIAC -->
+  <div class="menu-item teal-gradient" (click)="redirectToPage('cardiac')">
+    <span class="menu-text">CARDIAC</span>
+    <div class="menu-icon">
+      <i class="arrow-right"></i>
     </div>
+  </div>
 
-    <!-- Urology -->
-    <div class="col-6 d-flex justify-content-center" (click)="redirectToPage('urological')" style="cursor: pointer;">
-      <div class="specialty-card urology-bg">
-        <div class="blur-bg">
-          <img src="images/Urology.png" alt="Urology" class="blur-img" />
-        </div>
-        <div class="overlay-text">Urology</div>
-      </div>
+  <!-- UROLOGY -->
+  <div class="menu-item teal-gradient" (click)="redirectToPage('urological')">
+    <span class="menu-text">UROLOGY</span>
+    <div class="menu-icon">
+      <i class="arrow-right"></i>
     </div>
+  </div>
 
-    <!-- Colorectal -->
-    <div class="col-6 d-flex justify-content-center" (click)="redirectToPage('thoracic')" style="cursor: pointer;">
-      <div class="specialty-card colorectal-bg">
-        <div class="blur-bg">
-          <img src="images/Colorectal.png" alt="Colorectal" class="blur-img" />
-        </div>
-        <div class="overlay-text">Colorectal</div>
-      </div>
+  <!-- COLORECTAL -->
+  <div class="menu-item teal-gradient" (click)="redirectToPage('thoracic')">
+    <span class="menu-text">COLORECTAL</span>
+    <div class="menu-icon">
+      <i class="arrow-right"></i>
     </div>
+  </div>
 
-    <!-- Gynaecology -->
-    <div class="col-6 d-flex justify-content-center" (click)="redirectToPage('gynaecology')" style="cursor: pointer;">
-      <div class="specialty-card gynaecology-bg">
-        <div class="blur-bg">
-          <img src="images/gynaecology.png" alt="Gynaecology" class="blur-img" />
-        </div>
-        <div class="overlay-text">Gynaecology</div>
-      </div>
+  <!-- GYNAECOLOGY -->
+  <div class="menu-item teal-gradient" (click)="redirectToPage('gynaecology')">
+    <span class="menu-text">GYNAECOLOGY</span>
+    <div class="menu-icon">
+      <i class="arrow-right"></i>
     </div>
+  </div>
 
-    <!-- Head & Neck -->
-    <div class="col-6 d-flex justify-content-center" (click)="redirectToPage('Head-Neck')" style="cursor: pointer;">
-      <div class="specialty-card headneck-bg">
-        <div class="blur-bg">
-          <img src="images/Head & Neck.png" alt="Head & Neck" class="blur-img" />
-        </div>
-        <div class="overlay-text">Head & Neck</div>
-      </div>
+  <!-- HEAD & NECK -->
+  <div class="menu-item teal-gradient" (click)="redirectToPage('Head-Neck')">
+    <span class="menu-text">HEAD & NECK</span>
+    <div class="menu-icon">
+      <i class="arrow-right"></i>
     </div>
   </div>
 </div>

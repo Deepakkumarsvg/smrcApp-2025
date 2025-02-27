@@ -2,6 +2,13 @@
   color: rgb(22, 22, 22);
 }
 
+:host {
+  display: block;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #145252, #002727);
+  font-family: Arial, sans-serif;
+  padding: 20px 0; /* spacing at top and bottom */
+}
 /* --------new---------- */
 /* Define your color palette */
 .root {
