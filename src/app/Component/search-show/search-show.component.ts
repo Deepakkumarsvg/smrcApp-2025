@@ -3,10 +3,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { RequestMapperService } from '../../services/request-mapper.service';
 import { TransmissionService } from '../../transmission/transmission.service';
+import { SpinnerService } from '../../services/spinner.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-search-show',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './search-show.component.html',
   styleUrl: './search-show.component.css',
 })
@@ -17,11 +19,9 @@ export class SearchShowComponent implements OnInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private transmit: TransmissionService
-  ) {
-    // const navigation = this.router.getCurrentNavigation();
-    // this.searchResults = navigation?.extras.state?.['searchResults'];
-  }
+    private transmit: TransmissionService,
+    public spinnerService: SpinnerService
+  ) {}
   ngOnInit(): void {
     this.routeSub = this.route.queryParams.subscribe((params) => {
       const searchQuery = params['query'];
@@ -33,13 +33,14 @@ export class SearchShowComponent implements OnInit {
   }
 
   private async fetchSearchResults(query: string): Promise<void> {
-    console.log(`Fetching data for query: ${query}`);
+    this.spinnerService.show();
     await this.transmit
       .executeGetRequestPromise(
         `${RequestMapperService.FETCH_ACTIVITY_LIST}/${query}`
       )
       .then((res: any) => {
         if (res && res.data) {
+          this.spinnerService.hide();
           this.searchResults = res.data;
         }
       });

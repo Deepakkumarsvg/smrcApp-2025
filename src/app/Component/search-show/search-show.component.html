@@ -1,3 +1,9 @@
+@if(spinnerService.loading$ | async) {
+<div class="spinner-overlay">
+  <div class="spinner"></div>
+</div>
+}
+
 <div class="card-grid">
   @if(searchResults && searchResults.length > 0) {
   @for(ele of searchResults; track $index) {
