@@ -1,30 +1,23 @@
 <div class="card-grid">
+  @if(searchResults && searchResults.length > 0) {
+  @for(ele of searchResults; track $index) {
   <div class="card" style="background-color: rgba(253, 251, 251, 0.61);">
+    <!-- Dynamic Data -->
     <div class="card-body">
-      <h5 class="card-title">Card Title 1</h5>
+      @for(e of ele?.doctors; track $index) {
+      <h5 class="card-title">{{ e }}</h5>
+      }
       <p class="card-text">
-        This is a wider card with supporting text below as a natural lead-in to additional content.
-        This content is a little bit longer.
+        {{ ele?.activityName }}
+      </p>
+      <p class="card-text">
+        {{ ele?.about }}
       </p>
     </div>
+    <!-- Dynamic Data -->
   </div>
+  }
+  }
 
-  <div class="card" style="background-color: rgba(253, 251, 251, 0.61);">
-    <div class="card-body">
-      <h5 class="card-title">Card Title 2</h5>
-      <p class="card-text">
-        This card has supporting text below as a natural lead-in to additional content.
-      </p>
-    </div>
-  </div>
 
-  <div class="card" style="background-color: rgba(253, 251, 251, 0.61);">
-    <div class="card-body">
-      <h5 class="card-title">Card Title 3</h5>
-      <p class="card-text">
-        This is a wider card with supporting text below as a natural lead-in to additional content.
-        This card has even longer content than the first to show that equal height action.
-      </p>
-    </div>
-  </div>
 </div>

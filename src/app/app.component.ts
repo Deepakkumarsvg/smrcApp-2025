@@ -2,10 +2,15 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { RequestMapperService } from './services/request-mapper.service';
 import { TransmissionService } from './transmission/transmission.service';
-import { Route } from '@angular/router';
+import { Router } from '@angular/router';
+import { NavigationExtras } from '@angular/router';
 // import { WelcomeAddComponent } from './Component/welcome-add/welcome-add.component';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -35,19 +40,28 @@ export class AppComponent {
 
   constructor(
     private transmit: TransmissionService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router
   ) {
     this.searchForm = this.fb.group({
-      searchQuery: ['']
+      searchQuery: [''],
     });
   }
 
   public async search(): Promise<void> {
-    console.log("clicked me");
+    console.log('clicked me');
     const searchQuery = this.searchForm.get('searchQuery')?.value;
-    await this.transmit.executeGetRequestPromise(`${RequestMapperService.FETCH_ACTIVITY_LIST}/${searchQuery}`)
-    .then((res: any) => {
-      console.log(res);
-    })
+    await this.transmit
+      .executeGetRequestPromise(
+        `${RequestMapperService.FETCH_ACTIVITY_LIST}/${searchQuery}`
+      )
+      .then((res: any) => {
+        if (res && res.data) {
+          const navigationExtras: NavigationExtras = {
+            state: { searchResults: res.data },
+          };
+          this.router.navigate([`search`], navigationExtras);
+        }
+      });
   }
 }
