@@ -1,6 +1,6 @@
 /*--------- Togal-----------*/
 .search-container {
-  background-color: white;
+  background-color: rgb(0, 70, 58);
   border-radius: 30px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   padding: 2px;
@@ -84,7 +84,7 @@
 
 /* Click (Active) Effect - Change Color and Add Glow */
 .icon-link:active {
-  background-color: rgba(0, 150, 136, 0.4); /* Darker background on click */
+  background-color: rgba(0, 150, 136, 0.4);
   transform: scale(1.1);
 }
 
