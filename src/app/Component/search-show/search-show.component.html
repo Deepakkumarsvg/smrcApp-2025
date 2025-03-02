@@ -1,7 +1,7 @@
 <div class="card-grid">
   @if(searchResults && searchResults.length > 0) {
   @for(ele of searchResults; track $index) {
-  <div class="card" style="background-color: rgba(253, 251, 251, 0.61);">
+  <div class="card" style="background-color: rgb(255, 255, 255);">
     <!-- Dynamic Data -->
     <div class="card-body">
       @for(e of ele?.doctors; track $index) {

@@ -51,17 +51,8 @@ export class AppComponent {
   public async search(): Promise<void> {
     console.log('clicked me');
     const searchQuery = this.searchForm.get('searchQuery')?.value;
-    await this.transmit
-      .executeGetRequestPromise(
-        `${RequestMapperService.FETCH_ACTIVITY_LIST}/${searchQuery}`
-      )
-      .then((res: any) => {
-        if (res && res.data) {
-          const navigationExtras: NavigationExtras = {
-            state: { searchResults: res.data },
-          };
-          this.router.navigate([`search`], navigationExtras);
-        }
-      });
+    this.router.navigate(['search'], {
+      queryParams: { query: searchQuery },
+    });
   }
 }
