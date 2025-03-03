@@ -1,33 +1,39 @@
-  <!-- --------New------ -->
-  <div class="container my-4 pb-5">
-    <!-- Card Row -->
-    <div class=" root row g-3">
+<!-- --------New------ -->
+<div class="container my-4 pb-5">
+  <!-- Card Row -->
+  <div class=" root row g-3">
 
-      <!-- Dynamic Cards -->
-      @if(((activeActivities$ | async) ?? []).length > 0) {
-        @for(ele of (activeActivities$ | async); track $index) {
-          <div class="col-12">
-            <div class="custom-card p-3">
-              <!-- Status / Title Row -->
-              <div class="d-flex justify-content-between align-items-start">
-                <h5 class="card-title mb-1" style="color: #00b386;">
-                  {{ ele.activityName }}
-                </h5>
-                <span class="badge status-badge" style="color: #00cc66;"> {{ ele.status }}</span>
-              </div>
-              <!-- Subtitle Row -->
-              <div class="text-muted mb-2">
-                {{ ele?.startTime | date: 'EEEE HH:mm' }}
-              </div>
-              <!-- Speaker -->
-              @for(e of ele?.doctors; track $index) {
-                <div class="card-footer-text">
-                  <strong>{{ e }}</strong>
-                </div>
-              }
-            </div>
+    <!-- Dynamic Cards -->
+    @if(((activeActivities$ | async) ?? []).length > 0) {
+    @for(ele of (activeActivities$ | async); track $index) {
+    <div class="col-12">
+      <div class="custom-card p-3">
+        <!-- Status / Title Row -->
+        <div class="d-flex justify-content-between align-items-start">
+          <h5 class="card-title mb-1" style="color: #00b386;">
+            {{ ele.activityName }}
+          </h5>
+          <div class="badge status-badge" [ngSwitch]="ele.status">
+            <span *ngSwitchCase="'Live'" style="color: red;"> {{ ele.status }} </span>
+            <span *ngSwitchCase="'Upcoming'" style="color: green;"> {{ ele.status }} </span>
           </div>
+        </div>
+        <!-- Subtitle Row -->
+        <div class="text-muted mb-2">
+          {{ ele?.startTime | date: 'EEEE HH:mm' }}
+        </div>
+        <div class="text-muted mb-2">
+          {{ ele?.room }}
+        </div>
+        <!-- Speaker -->
+        @for(e of ele?.doctors; track $index) {
+        <div class="card-footer-text">
+          <strong>{{ e }}</strong>
+        </div>
         }
-      }
+      </div>
     </div>
+    }
+    }
   </div>
+</div>

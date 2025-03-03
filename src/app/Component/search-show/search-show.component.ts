@@ -34,6 +34,8 @@ export class SearchShowComponent implements OnInit {
 
   private async fetchSearchResults(query: string): Promise<void> {
     this.spinnerService.show();
+    // Trasnmit is used for communicating the backend service
+    // RequestMapperService.FETCH_ACTIVITY_LIST endpoint
     await this.transmit
       .executeGetRequestPromise(
         `${RequestMapperService.FETCH_ACTIVITY_LIST}/${query}`
@@ -43,6 +45,11 @@ export class SearchShowComponent implements OnInit {
           this.spinnerService.hide();
           this.searchResults = res.data;
         }
+      })
+      .catch((error: any) => {
+        this.spinnerService.hide();
+        console.log('No Results Found');
+        this.searchResults = [];
       });
   }
 
