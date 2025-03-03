@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { SearchShowComponent } from '../search-show/search-show.component';
 
 @Component({
   selector: 'app-urological',
-  imports: [SearchShowComponent],
+  imports: [],
   templateUrl: './urological.component.html',
   styleUrl: './urological.component.css',
 })
